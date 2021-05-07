@@ -180,6 +180,26 @@ footer h3 a{
 
 
 /* _____________________________________ */
+/*   Mise en place de la galerie mobile  */
+/* _____________________________________ */
+
+@media screen and (min-width: 780px) {
+    .flexing {
+        display: flex; /*Je rend le contenu flottant (flex-box)*/
+    }
+    
+    #gallery{
+        justify-content: space-between; /*Je crée de l'espace entre le contneu (flex-box)*/
+        flex-wrap: wrap; /*Je fais un retour à la ligne quand mon élément parent est trop petit pour tout contenir(flex-box)*/
+    } 
+    
+    #gallery figure {
+        width: 47.5%; /*La largeur de chaque figure sera adaptée à son parent*/
+    }
+}
+
+
+/* _____________________________________ */
 /*      Page contact : Disponibilité     */
 /* _____________________________________ */
 
@@ -234,27 +254,4 @@ input, select{
     color: rgba(163, 203, 77, .9);
     transition: .1s ease-in;
     transform: scale(1.05);
-}
-
-
-
-
-
-
-
-/* _____________________________________ */
-/*   Mise en place de la galerie mobile  */
-/* _____________________________________ */
-
-@media screen and (min-width:780px){
-    #gallery figure{
-        width: 20%;
-    }
-    .flexing{
-        display:flex;
-    }
-    #gallery{
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
 }
